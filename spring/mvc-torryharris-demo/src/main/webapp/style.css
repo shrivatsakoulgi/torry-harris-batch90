@@ -1,0 +1,16 @@
+@CHARSET "ISO-8859-1";
+
+body {
+text-align: center;
+}
+input[type=text],input[type=password] {
+border-radius: 8px;
+}
+input[type=number] {
+border-radius: 8px;
+}
+input[type=submit]{
+color:blue;
+border:5;
+border-radius: 5px;
+}

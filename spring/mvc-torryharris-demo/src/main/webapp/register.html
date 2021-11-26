@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+function checkValues(){
+	checkAge();
+	checkPassword();
+}
+function checkAge(){
+	var age = document.getElementById("age").value;
+	if(age<12 || age>120){
+		alert("Invalid age:"+age+"\nEnter the age between 12-120.");
+		event.preventDefault();
+	}
+}
+
+function checkPassword(){
+	
+	var p1 = document.getElementById("password1").value;
+	var p2 = document.getElementById("password2").value;
+	if(p1!=p2)
+	{
+		alert("Two Passwords Must be same !!");
+		event.preventDefault();
+	}
+}
+</script>
+<link rel="stylesheet" href="style.css">
+</link>
+<meta charset="ISO-8859-1">
+<title>Registration Page</title>
+</head>
+<body>
+<h2> Enter your details</h2>
+<form action="register" method="post">
+<table border=0>
+<tr>
+	<td> <label> First Name:</label> </td>
+	<td> <input type="text" name="fname"> </td>
+</tr>
+<tr>
+	<td> <label> Last Name:</label> </td>
+	<td> <input type="text" name="lname"> </td>
+</tr>
+<tr>
+	<td> <label> User Name:</label> </td>
+	<td> <input type="text" name="username"> </td>
+</tr>
+<tr>
+	<td> <label> Password:</label> </td>
+	<td> <input type="password" name="password1" id="password1"> </td>
+</tr>
+<tr>
+	<td> <label>Confirm Password:</label> </td>
+	<td> <input type="password" name="password2" id="password2" > </td>
+</tr>
+<tr>
+	<td> <label> Age:</label> </td>
+	<td> <input type="number" name="age" id="age"> </td>
+</tr>
+</table>
+<br>
+<input type="submit" onclick="checkValues()">
+</form>
+</body>
+</html>
